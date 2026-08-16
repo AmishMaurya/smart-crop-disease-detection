@@ -275,7 +275,7 @@ analyzeBtn.addEventListener("click", async function () {
     const API_URL =
         window.location.hostname === "localhost" ||
         window.location.hostname === "127.0.0.1"
-            ? "http://127.0.0.1:5000/api/predict"
+            ? "http://127.0.0.1:5000/predict"
         : "/api/predict";
 
     const response = await fetch(
