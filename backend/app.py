@@ -71,7 +71,7 @@ def home():
 
     return send_from_directory(
         "..",
-        "project.html"
+        "index.html"
     )
 @app.route("/project.css")
 def css():
