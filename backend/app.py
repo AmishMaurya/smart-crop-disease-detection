@@ -103,8 +103,13 @@ def image():
 # =========================
 # Prediction Route
 # =========================
-
-@app.route("/predict", methods=["POST"])
+@app.route("/api")
+def api_home():
+    return jsonify({
+        "status": "success",
+        "message": "CropCare AI API is running"
+    })
+@app.route("/api/predict", methods=["POST"])
 def predict():
 
     # Check image

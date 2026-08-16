@@ -273,11 +273,11 @@ analyzeBtn.addEventListener("click", async function () {
 
         // Send image to Flask
         const response = await fetch(
-            "http://127.0.0.1:5000/predict",
+            "/api/predict",
             {
                 method: "POST",
                 body: formData
-            }
+           }
         );
 
         // Convert response to JSON
@@ -480,8 +480,7 @@ if (topPredictions.length > 0) {
                 </p>
 
                 <p>
-                    Make sure Flask is running on
-                    <strong>127.0.0.1:5000</strong>.
+                    Please try again. The CropCare AI server may be temporarily unavailable.
                 </p>
 
             </div>
