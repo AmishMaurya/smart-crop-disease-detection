@@ -1,0 +1,12 @@
+venv/
+venv_old/
+__pycache__/
+*.pyc
+.env
+.vscode/
+
+backend/app_backup.py
+backend/app_backup_step15.py
+backend/your_model.h5
+backend/test_model.py
+test_image.jpg

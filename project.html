@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CropCare AI</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="project.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">🌱 CropCare AI</div>
+
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#scanner">Disease Scanner</a></li>
+                <li><a href="#crops">Crop Library</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <!-- Hero Section -->
+    <section class="hero">
+
+        <div class="hero-text">
+
+            <h1>Smart Crop Disease Detection</h1>
+
+            <p>
+                Upload a crop image and let AI identify diseases,
+                provide confidence score, symptoms, and management advice.
+            </p>
+
+            <button class="btn" id="scanBtn">
+                Scan Your Crop
+            </button>
+
+        </div>
+
+
+        <div class="hero-image">
+
+            <img src="crop.png" alt="Crop Image">
+
+        </div>
+
+    </section>
+
+
+    <!-- Disease Scanner -->
+    <section class="scanner" id="scanner">
+
+        <h2>🌱 Crop Disease Scanner</h2>
+
+        <p>
+            Upload a crop leaf image to analyze it.
+        </p>
+
+        <!-- Hidden file input -->
+        <input
+            type="file"
+            id="cropImage"
+            accept="image/*"
+            hidden
+        >
+
+        <!-- Upload button -->
+        <button class="btn" id="uploadBtn">
+            📷 Choose Crop Image
+        </button>
+
+
+        <!-- Image Preview -->
+        <div class="preview-container">
+
+            <img
+                id="preview"
+                src=""
+                alt="Crop Preview"
+            >
+
+        </div>
+
+
+        <!-- Analyze Button -->
+        <button
+            class="analyze-btn"
+            id="analyzeBtn"
+        >
+            Analyze Crop
+        </button>
+
+
+        <!-- Result -->
+        <div
+            id="result"
+            class="result"
+        ></div>
+
+    </section>
+    <!-- Crop Library -->
+<section class="crop-library" id="crops">
+
+    <h2>🌾 Crop Library</h2>
+
+    <p>
+        Explore common crops and their possible diseases.
+    </p>
+
+    <div class="crop-container">
+
+        <div class="crop-card" data-crop="Tomato">
+            <div class="crop-icon">🍅</div>
+            <h3>Tomato</h3>
+            <p>View tomato diseases</p>
+            <button class="view-crop-btn">View Diseases</button>
+        </div>
+
+        <div class="crop-card" data-crop="Potato">
+            <div class="crop-icon">🥔</div>
+            <h3>Potato</h3>
+            <p>View potato diseases</p>
+            <button class="view-crop-btn">View Diseases</button>
+        </div>
+
+        <div class="crop-card" data-crop="Rice">
+            <div class="crop-icon">🌾</div>
+            <h3>Rice</h3>
+            <p>View rice diseases</p>
+            <button class="view-crop-btn">View Diseases</button>
+        </div>
+
+        <div class="crop-card" data-crop="Maize">
+            <div class="crop-icon">🌽</div>
+            <h3>Maize</h3>
+            <p>View maize diseases</p>
+            <button class="view-crop-btn">View Diseases</button>
+        </div>
+
+    </div>
+
+    <div id="cropDetails" class="crop-details"></div>
+
+</section>
+
+
+    <!-- Features -->
+    <section class="features">
+
+        <h2>Our Features</h2>
+
+        <div class="card-container">
+
+            <div class="card">
+
+                <h3>📷 Image Detection</h3>
+
+                <p>
+                    Upload crop images for AI-based
+                    disease analysis.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>🌍 Multi Language</h3>
+
+                <p>
+                    Support for English and Hindi.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>📊 Accurate Results</h3>
+
+                <p>
+                    Get confidence score and
+                    disease information.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            © 2026 CropCare AI | Smart Farming Solution
+        </p>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script src="project.js"></script>
+
+</body>
+
+</html>
