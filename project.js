@@ -272,13 +272,19 @@ analyzeBtn.addEventListener("click", async function () {
     try {
 
         // Send image to Flask
-        const response = await fetch(
-            "/api/predict",
-            {
-                method: "POST",
-                body: formData
-           }
-        );
+    const API_URL =
+        window.location.hostname === "localhost" ||
+        window.location.hostname === "127.0.0.1"
+            ? "http://127.0.0.1:5000/api/predict"
+        : "/api/predict";
+
+    const response = await fetch(
+        API_URL,
+        {
+            method: "POST",
+            body: formData
+        }
+    );
 
         // Convert response to JSON
         const data = await response.json();
@@ -659,5 +665,6 @@ function addDiseaseButtonEvents() {
         });
 
     });
+    
 
 }
